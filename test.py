@@ -1,4 +1,5 @@
 from appium import webdriver
+import base64
 
 caps = {
   "deviceName": "Pixel 3 API 29",
@@ -10,6 +11,9 @@ caps = {
 
 driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
 
-driver.push_file("/mnt/sdcard/Pictures/test.txt", 'QXJlIHlvdXIgYmVlcnMgb2theT8=')
+with open("image-appium-challenge.jpg", "rb") as image_file:
+    encoded_string = base64.b64encode(image_file.read())
+
+driver.push_file("/sdcard/Pictures/image-appium-challenge.jpg", encoded_string)
 
 driver.quit()
