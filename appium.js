@@ -46,8 +46,8 @@ async function main() {
             // console.log(path.substring(path.lastIndexOf(('/') + 1)));
             var array = path.split('/');
             var lastsegment = array[array.length-1];
-            assert(lastsegment == ("image-appium-challenge.jpg")); //if true it will  ouput  nothing to the console.  If false it will through  an Assertion Error
-
+            assert(lastsegment == ("image-appium-challenge.jpg")); //if true it will move on and output the next line. If false it will through  an Assertion Error
+            console.log("Assertion True: The image names match");
         });
 
 
