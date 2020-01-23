@@ -1,6 +1,6 @@
 # Appium Challenge 
 
- Automated native Android application Ookla on an Android Emulator using javascript webdriver package WD.js and Appium.
+ Automate Test Case to upload image to emulator using Appium and check to make sure the file name in the path matches your local file name. 
 
 
 ### Prerequisites
